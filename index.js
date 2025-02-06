@@ -13,7 +13,7 @@ let data = [];
 const apiUrl = 'https://api.taostats.io/api/call/v1';
 const apiParams = {
   full_name: 'SubtensorModule.vote',
-  block_start: 700000,
+  block_start: 4800000,
 };
 // API key from environment variable
 const apiKey = process.env.TAOSTATS_API_KEY;
