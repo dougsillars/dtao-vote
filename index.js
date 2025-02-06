@@ -72,21 +72,27 @@ app.get('/', (req, res) => {
   const tableHtml = `
     <meta http-equiv="refresh" content="12">
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <h1 align = "center"> dTao Vote</h1>
-    <table >
+    <h1>dTao Vote</h1>
+    <div class="table-wrapper">
+    <table>
+      <thead>
       <tr>
         <th>Block</th>
         <th>Hotkey</th>
         <th>Vote</th>
       </tr>
+      </thead>
+      <tbody>
       ${data.map((item) => `
         <tr>
           <td>${item.block}</td>
           <td>${item.hotkey}</td>
-          <td>${item.vote ? 'Yes' : 'No'}</td>
+          <td class="vote-${item.vote ? 'yes' : 'no'}">${item.vote ? 'Yes' : 'No'}</td>
         </tr>
       `).join('')}
+    </tbody>
     </table>
+    </div>
     <div class="footer">
         <p>Powered by <a href="https://taostats.io"><img width = 200px src="/taostats.jpg" alt="taostats" /></a></p>
     </div>

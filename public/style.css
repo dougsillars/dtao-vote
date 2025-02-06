@@ -2,57 +2,75 @@ body {
     background-color: #121212;
     color: #fff;
     font-family: Arial, sans-serif;
+    min-width: 500px;
+  }
+
+  .table-wrapper {
+    background-color: rgb(23,23,23);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
   }
   
   table {
-    border-collapse: collapse;
-    width: 80%;
+    border-spacing: 0 10px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
   }
   
   th, td {
-    border: 1px solid #666;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
+  }
+
+  thead tr {
+    color: rgb(115, 115, 115);
+    font-size: 12px;
+  }
+
+  thead tr th {
+    padding-bottom: 0;
+  }
+
+  tbody tr {
+    background-color: rgba(38,38,38,0.2);
+    border-radius: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(202,202,202);
+  }
+
+  tbody tr:hover {
+    background-color: rgba(38,38,38,1);
   }
   
-  th {
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
+  tbody td:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
-  
-  td {
-    background-color: #555;
+
+  tbody td:nth-child(2) {
+    overflow-wrap: anywhere;
   }
-  
-  tr:nth-child(even) {
-    background-color: #444;
+
+  tbody td:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
-  
-  tr:nth-child(odd) {
-    background-color: #555;
+
+  tbody tr td.vote-yes {
+    color: rgb(0, 219, 188);
   }
-  td:first-child {
-    border-left: none;
-  }
-  
-  td:last-child {
-    border-right: none;
-  }
-  
-  th:first-child {
-    border-left: none;
-  }
-  
-  th:last-child {
-    border-right: none;
+
+  tbody tr td.vote-no {
+    color: rgb(247, 124, 54);
   }
   
   h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 3.75rem;
+    margin: 1.5rem 3rem;
+    text-align: left;
   }
   
   a {
